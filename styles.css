@@ -6,7 +6,7 @@ body {
     background: #ffe6e6; /* Zarter Rosa-Ton */
     color: #333;
   }
-img {
+.img {
     width: 100%;
     max-width: 500px;
     height: 50%;
