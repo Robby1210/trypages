@@ -9,7 +9,7 @@ body {
 .img {
     width: 100%;
     max-width: 500px;
-    height: 30%;
+    height: auto;
 } 
   header {
     text-align: center;
