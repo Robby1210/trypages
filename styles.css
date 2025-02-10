@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffe6e6; /* Zarter Rosa-Ton */
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: #ff99cc;
+    color: white;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .event {
+    background: white;
+    border: 2px solid #ff99cc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #ff4da6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #e60073;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #ff99cc;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
