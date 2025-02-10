@@ -7,9 +7,9 @@ body {
     color: #333;
   }
 .img {
-    width: 70%;
+    width: 120%;
     max-width: 500px;
-    height: auto;
+    height: 100%;
 } 
   header {
     text-align: center;
