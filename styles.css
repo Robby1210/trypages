@@ -7,7 +7,7 @@ body {
     color: #333;
   }
   .img {
-    height: 8cm;  /* Höhe auf 8 cm festlegen */
+    height: 5cm;  /* Höhe auf 8 cm festlegen */
     width: auto;  /* Breite automatisch anpassen */
     max-width: 100%; /* Maximale Breite nicht überschreiten */
     object-fit: contain; /* Bild vollständig anzeigen */
