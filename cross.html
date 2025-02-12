@@ -86,6 +86,9 @@
 
             if (correct) {
                 document.getElementById("message").style.display = "block";
+                setTimeout(() => {
+                        window.location.href = "ueberraschung.html";
+                }, 3000);  // 3 Sekunden Verzögerung
             } else {
                 alert("Noch nicht ganz richtig. Versuche es weiter!");
             }
