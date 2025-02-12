@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreuzworträtsel Antrag</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(10, 40px); gap: 5px; justify-content: center; margin-top: 20px; }
+        .cell { width: 40px; height: 40px; text-align: center; font-size: 20px; border: 1px solid black; text-transform: uppercase; }
+        .fixed { background-color: lightgray; font-weight: bold; }
+        #message { display: none; font-size: 24px; color: red; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Löse das Kreuzworträtsel!</h2>
+    <p>Fülle alle Felder aus, um die geheime Nachricht zu enthüllen.</p>
+
+    <div class="grid" id="crossword">
+        <!-- Hier wird das Kreuzworträtsel mit JavaScript generiert -->
+    </div>
+
+    <button onclick="checkAnswers()">Prüfen</button>
+    <p id="message">💍 Willst du mich heiraten? 💍</p>
+
+    <script>
+        // Leeres 10x10 Raster mit vorgegebenen Buchstaben (ersetzen mit eigenen Werten)
+        const crosswordData = [
+            ["H", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", "", "", "", "L"]
+        ];
+
+        const crosswordContainer = document.getElementById("crossword");
+        
+        crosswordData.forEach((row, rowIndex) => {
+            row.forEach((letter, colIndex) => {
+                let input = document.createElement("input");
+                input.classList.add("cell");
+                input.maxLength = 1;
+                
+                if (letter !== "") {
+                    input.value = letter;
+                    input.disabled = true;
+                    input.classList.add("fixed");
+                } else {
+                    input.dataset.row = rowIndex;
+                    input.dataset.col = colIndex;
+                }
+                crosswordContainer.appendChild(input);
+            });
+        });
+        
+        function checkAnswers() {
+            // Hier kannst du die korrekten Antworten hinterlegen
+            let correctAnswers = [
+                ["H", "A", "L", "L", "O", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", "", "", "", "L"]
+            ];
+            
+            let correct = true;
+            document.querySelectorAll(".cell:not(.fixed)").forEach(input => {
+                let row = input.dataset.row;
+                let col = input.dataset.col;
+                if (input.value.toUpperCase() !== correctAnswers[row][col]) {
+                    correct = false;
+                }
+            });
+
+            if (correct) {
+                document.getElementById("message").style.display = "block";
+            } else {
+                alert("Noch nicht ganz richtig. Versuche es weiter!");
+            }
+        }
+    </script>
+</body>
+</html>
