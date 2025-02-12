@@ -15,19 +15,21 @@
 <body>
     <h2>Löse das Kreuzworträtsel!</h2>
     <p>Fülle alle Felder aus, um die geheime Nachricht zu enthüllen.</p>
+    <p> 1: Wo haben wir uns kennengelernt?</p>
+    <p> 2: Was habe ich dir geschenkt als wir zusammen auf der Falzburg waren?</p>
 
     <div class="grid" id="crossword">
         <!-- Hier wird das Kreuzworträtsel mit JavaScript generiert -->
     </div>
 
     <button onclick="checkAnswers()">Prüfen</button>
-    <p id="message">💍 Willst du mich heiraten? 💍</p>
+    <p id="message"> Ich liebe dich </p>
 
     <script>
         // Leeres 10x10 Raster mit vorgegebenen Buchstaben (ersetzen mit eigenen Werten)
         const crosswordData = [
-            ["H", "", "", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "", "", ""],
+            ["D", "", "", "", "", "A", "-", "-", "-", "-"],
+            ["", "", "H", "Ä", "", "", "", "R", "-", "-"],
             ["", "", "", "", "", "", "", "", "", ""],
             ["", "", "", "", "", "", "", "", "", ""],
             ["", "", "", "", "", "", "", "", "", ""],
@@ -61,7 +63,7 @@
         function checkAnswers() {
             // Hier kannst du die korrekten Antworten hinterlegen
             let correctAnswers = [
-                ["H", "A", "L", "L", "O", "", "", "", "", ""],
+                ["D", "O", "U", "A", "L", "A", "", "", "", ""],
                 ["", "", "", "", "", "", "", "", "", ""],
                 ["", "", "", "", "", "", "", "", "", ""],
                 ["", "", "", "", "", "", "", "", "", ""],
