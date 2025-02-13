@@ -17,6 +17,14 @@
     <p>Fülle alle Felder aus, um die geheime Nachricht zu enthüllen.</p>
     <p> 1: Wo haben wir uns kennengelernt?</p>
     <p> 2: Was habe ich dir geschenkt als wir zusammen auf der Falzburg waren?</p>
+    <p> 3: Ohne was kann ich nicht schlafen?</p>
+    <p> 4: Welchen Sport haben wir uns als erstes gemeinsam angeschaut?</p>
+    <p> 5: Wer hatte bei deinem ersten Treffen mit meinen Eltern Geburtstag?</p>
+    <p> 6: Wo waren wir kurz nachdem ich mein Studium verloren habe essen?</p>
+    <p> 7: Was war unser liebster Ort in Friedrichshafen?</p>
+    <p> 8: Wo waren wir am 1. Abend Riol?</p>
+    <p> 9: Wie hat mich Hessek im Bezug auf "Jeder Topf findet seinen Deckel" genannt? </p>
+    <p> 10: Wie fanden wir die letzten 2 Jahre und 3 Monate?</p>
 
     <div class="grid" id="crossword">
         <!-- Hier wird das Kreuzworträtsel mit JavaScript generiert -->
@@ -30,14 +38,14 @@
         const crosswordData = [
             ["D", "", "", "", "", "A", "-", "-", "-", "-"],
             ["", "", "H", "Ä", "", "", "", "R", "-", "-"],
-            ["", "", "", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "", "", ""],
-            ["", "", "", "", "", "", "", "", "", "L"]
+            ["E", "", "", "", "K", "", "", "S", "", "N"],
+            ["", "", "N", "", "B", "", "L", "L", "-", "-"],
+            ["", "A", "", "", "A", "-", "-", "-", "-", "-"],
+            ["M", "", "D", "", "", "", "", "", "S", "-"],
+            ["M", "", "", "Z", "", "L", "L", "-", "-", "-"],
+            ["W", "", "", "", "S", "", "", "N", "D", "-"],
+            ["W", "", "", "P", "", "", "", "", "E", "-"],
+            ["H", "", "M", "M", "", "R", "", "E", "I", ""]
         ];
 
         const crosswordContainer = document.getElementById("crossword");
@@ -65,14 +73,14 @@
             let correctAnswers = [
                 ["D", "O", "U", "A", "L", "A", "", "", "", ""],
                 ["A", "N", "H", "Ä", "N", "G", "E", "R", "", ""],
-                ["", "", "", "", "", "", "", "", "", ""],
-                ["", "", "", "", "", "", "", "", "", ""],
-                ["", "", "", "", "", "", "", "", "", ""],
-                ["", "", "", "", "", "", "", "", "", ""],
-                ["", "", "", "", "", "", "", "", "", ""],
-                ["", "", "", "", "", "", "", "", "", ""],
-                ["", "", "", "", "", "", "", "", "", ""],
-                ["", "", "", "", "", "", "", "", "", "L"]
+                ["E", "I", "S", "I", "K", "I", "S", "S", "E", "N"],
+                ["H", "A", "N", "D", "B", "A", "L", "L", "", ""],
+                ["P", "A", "U", "L", "A", "", "", "", "", ""],
+                ["M", "C", "D", "O", "N", "A", "L", "D", "S", ""],
+                ["M", "A", "N", "Z", "E", "L", "L", "", "", ""],
+                ["W", "E", "I", "N", "S", "T", "A", "N", "D", ""],
+                ["W", "O", "K", "P", "F", "A", "N", "N", "E", ""],
+                ["H", "A", "M", "M", "E", "R", "G", "E", "I", "L"]
             ];
             
             let correct = true;
