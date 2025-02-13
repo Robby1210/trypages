@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Überraschung</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff9a9e, #fecfef);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .text-box {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .fade {
+            animation: fade 2s ease-in-out;
+        }
+        @keyframes fade {
+            from {opacity: 0.4;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Für Dich, meine Liebe ❤️</h1>
+    
+    <div class="text-box">
+        <p>Mein allerliebstes Kacko, </p>
+        <p>Vor 2 Jahren und 3 Monaten hat sich mein Leben komplett verändert. Ich hätte niemals für möglich gehalten, dass ich so ein Glück haben könnte. 
+            Es hat bei uns einfach von Anfang an perfekt gematched. Unsere Liebe war noch nie an irgendwelche Bedingungen oder sonst was geknüpft. Sondern wir geben uns jeden Tag
+            die maximale Dosis an Liebe. Tag für Tag. Wir haben es am Anfang echt nicht leicht gehabt. Unsere Leben waren beide sehr stressig. Geprägt von finanziellen Sorgen, existenz Ängste
+            und der Wunsch nach ein wenig Ruhe. Und genau diese Ruhe haben wir uns gegenseitig 
+        </p>
+    </div>
+
+    <div class="slideshow-container">
+        <img class="slide fade" src="bild1.jpg" alt="Bild 1">
+        <img class="slide fade" src="bild2.jpg" alt="Bild 2">
+        <img class="slide fade" src="bild3.jpg" alt="Bild 3">
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+
+</body>
+</html>
